@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="438.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.IrctcController">
+   <children>
+      <TabPane blendMode="DARKEN" layoutX="6.0" prefHeight="438.0" prefWidth="685.0" rotateGraphic="true" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab style="-fx-background-color: #ffffff;" text="Train Search">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="438.0" prefWidth="639.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <TextField fx:id="txtFrom" layoutX="222.0" layoutY="43.0" prefHeight="39.0" prefWidth="287.0" promptText="LOKMANYATILAK T - LTT" />
+                        <TextField fx:id="txtTo" layoutX="222.0" layoutY="97.0" prefHeight="40.0" prefWidth="287.0" promptText="VARANASI JN - BSB" />
+                        <Label layoutX="146.0" layoutY="46.0" prefHeight="33.0" prefWidth="68.0" text="From*">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="165.0" layoutY="101.0" prefHeight="33.0" prefWidth="41.0" text="To*">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtDate" layoutX="222.0" layoutY="151.0" prefHeight="40.0" prefWidth="287.0" promptText="DD-MM-YYYY" />
+                        <Label layoutX="160.0" layoutY="155.0" prefHeight="33.0" prefWidth="51.0" text="Date">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="157.0" layoutY="219.0" prefHeight="33.0" prefWidth="58.0" text="Class">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="TrainClass" layoutX="222.0" layoutY="215.0" prefHeight="41.0" prefWidth="290.0" style="-fx-background-color: #f5f5dc;" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab style="-fx-background-color: #ffffff;" text="Train details">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="438.0" prefWidth="639.0">
+                     <children>
+                        <ScrollPane layoutX="8.0" layoutY="3.0" prefHeight="390.0" prefWidth="677.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="403.0" prefWidth="655.0" style="-fx-background-color: #ffffff;">
+                                 <children>
+                                    <TextField fx:id="txttrainName" layoutX="221.0" layoutY="66.0" prefHeight="39.0" prefWidth="287.0" promptText="RAJDHANI EXP" />
+                                    <Label layoutX="91.0" layoutY="69.0" prefHeight="33.0" prefWidth="123.0" text="Train Name">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtTrainSequence" layoutX="221.0" layoutY="123.0" prefHeight="39.0" prefWidth="49.0" promptText="3" />
+                                    <Label layoutX="54.0" layoutY="126.0" prefHeight="33.0" prefWidth="160.0" text="Train Sequence">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="Passengers" layoutX="221.0" layoutY="182.0" prefHeight="29.0" prefWidth="59.0" style="-fx-background-color: #f5f5dc;" />
+                                    <Label layoutX="24.0" layoutY="180.0" prefHeight="33.0" prefWidth="182.0" text="No Of Passengers">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="142.0" layoutY="251.0" prefHeight="33.0" prefWidth="64.0" text="Quota">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="Quota" layoutX="220.0" layoutY="247.0" prefHeight="41.0" prefWidth="290.0" style="-fx-background-color: #f5f5dc;" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab style="-fx-background-color: #ffffff;" text="Passengers">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="438.0" prefWidth="639.0">
+                     <children>
+                        <ScrollPane layoutX="8.0" layoutY="3.0" prefHeight="390.0" prefWidth="677.0">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="403.0" prefWidth="655.0" style="-fx-background-color: #ffffff;">
+                                 <children>
+                                    <TextField fx:id="txtPassenge1" layoutX="24.0" layoutY="74.0" prefHeight="30.0" prefWidth="232.0" promptText="passenger1 name" />
+                                    <TextField fx:id="txtPassAge1" layoutX="281.0" layoutY="74.0" prefHeight="30.0" prefWidth="50.0" promptText="age" />
+                                    <ComboBox fx:id="Gender1" layoutX="351.0" layoutY="76.0" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: #f5f5dc;" />
+                                    <ComboBox fx:id="Preference1" layoutX="466.0" layoutY="76.0" prefHeight="26.0" prefWidth="137.0" style="-fx-background-color: #f5f5dc;" />
+                                    <Label layoutX="72.0" layoutY="35.0" prefHeight="33.0" prefWidth="68.0" text="Name">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <graphic>
+                                          <Label prefHeight="33.0" prefWidth="68.0" text="Name">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label layoutX="283.0" layoutY="35.0" prefHeight="33.0" prefWidth="46.0" text="Age">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="351.0" layoutY="35.0" prefHeight="33.0" prefWidth="83.0" text="Gender">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="472.0" layoutY="35.0" prefHeight="33.0" prefWidth="112.0" text="Preference">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtPassenge2" layoutX="24.0" layoutY="111.0" prefHeight="30.0" prefWidth="232.0" promptText="passenger2 name" />
+                                    <TextField fx:id="txtPassAge2" layoutX="281.0" layoutY="111.0" prefHeight="30.0" prefWidth="50.0" promptText="age" />
+                                    <ComboBox fx:id="Gender2" layoutX="350.0" layoutY="113.0" prefHeight="26.0" prefWidth="102.0" style="-fx-background-color: #f5f5dc;" />
+                                    <ComboBox fx:id="Preference2" layoutX="467.0" layoutY="113.0" prefHeight="26.0" prefWidth="136.0" style="-fx-background-color: #f5f5dc;" />
+                                    <TextField fx:id="txtPassenge3" layoutX="24.0" layoutY="150.0" prefHeight="30.0" prefWidth="232.0" promptText="passenger3 name" />
+                                    <ComboBox fx:id="Gender3" layoutX="350.0" layoutY="152.0" prefHeight="26.0" prefWidth="102.0" style="-fx-background-color: #f5f5dc;" />
+                                    <ComboBox fx:id="Preference3" layoutX="467.0" layoutY="152.0" prefHeight="26.0" prefWidth="136.0" style="-fx-background-color: #f5f5dc;" />
+                                    <TextField fx:id="txtPassAge3" layoutX="281.0" layoutY="150.0" prefHeight="30.0" prefWidth="50.0" promptText="age" />
+                                    <TextField fx:id="txtPassenge4" layoutX="24.0" layoutY="187.0" prefHeight="30.0" prefWidth="232.0" promptText="passenger4 name" />
+                                    <TextField fx:id="txtPassenge5" layoutX="24.0" layoutY="228.0" prefHeight="30.0" prefWidth="232.0" promptText="passenger5 name" />
+                                    <TextField fx:id="txtPassenge6" layoutX="24.0" layoutY="268.0" prefHeight="30.0" prefWidth="232.0" promptText="passenger6 name" />
+                                    <TextField fx:id="txtPassAge4" layoutX="281.0" layoutY="187.0" prefHeight="30.0" prefWidth="50.0" promptText="age" />
+                                    <TextField fx:id="txtPassAge5" layoutX="281.0" layoutY="228.0" prefHeight="30.0" prefWidth="50.0" promptText="age" />
+                                    <TextField fx:id="txtPassAge6" layoutX="281.0" layoutY="268.0" prefHeight="30.0" prefWidth="50.0" promptText="age" />
+                                    <ComboBox fx:id="Gender4" layoutX="350.0" layoutY="189.0" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: #f5f5dc;" />
+                                    <ComboBox fx:id="Gender5" layoutX="351.0" layoutY="230.0" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: #f5f5dc;" />
+                                    <ComboBox fx:id="Gender6" layoutX="351.0" layoutY="270.0" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: #f5f5dc;" />
+                                    <ComboBox fx:id="Preference4" layoutX="468.0" layoutY="189.0" prefHeight="26.0" prefWidth="135.0" style="-fx-background-color: #f5f5dc;" />
+                                    <ComboBox fx:id="Preference5" layoutX="465.0" layoutY="230.0" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: #f5f5dc;" />
+                                    <ComboBox fx:id="Preference6" layoutX="466.0" layoutY="270.0" prefHeight="26.0" prefWidth="137.0" style="-fx-background-color: #f5f5dc;" />
+                                    <TextField fx:id="txtPhoneNo" layoutX="217.0" layoutY="326.0" prefHeight="33.0" prefWidth="244.0" promptText="passenger contact no" />
+                                    <Label layoutX="106.0" layoutY="327.0" prefHeight="33.0" prefWidth="106.0" text="Phone No">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-background-color: #ffffff;" text="card details">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="438.0" prefWidth="639.0">
+                     <children>
+                        <ScrollPane layoutX="8.0" layoutY="3.0" prefHeight="390.0" prefWidth="677.0">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="403.0" prefWidth="655.0" style="-fx-background-color: #ffffff;">
+                                 <children>
+                                    <TextField fx:id="txtCardNumber" layoutX="194.0" layoutY="61.0" prefHeight="39.0" prefWidth="342.0" promptText="16 digit card number(1234567812345678)" />
+                                    <Label layoutX="54.0" layoutY="64.0" prefHeight="33.0" prefWidth="137.0" text="Card Number">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtValidTo" layoutX="194.0" layoutY="138.0" prefHeight="39.0" prefWidth="87.0" promptText="MM" />
+                                    <TextField fx:id="txtExpiryDate" layoutX="432.0" layoutY="138.0" prefHeight="39.0" prefWidth="90.0" promptText="YYYY" />
+                                    <Label layoutX="103.0" layoutY="141.0" prefHeight="33.0" prefWidth="84.0" text="Valid To">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="304.0" layoutY="141.0" prefHeight="33.0" prefWidth="121.0" text="Expiry Date">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtCardHolderName" layoutX="194.0" layoutY="208.0" prefHeight="39.0" prefWidth="342.0" promptText="card holder name" />
+                                    <Label layoutX="5.0" layoutY="211.0" prefHeight="33.0" prefWidth="186.0" text="Card holder Name">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <PasswordField fx:id="txtPin" layoutX="196.0" layoutY="270.0" prefHeight="38.0" prefWidth="171.0" promptText="card pin" />
+                                    <Label layoutX="153.0" layoutY="273.0" prefHeight="33.0" prefWidth="38.0" text="Pin">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children></AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-background-color: #ffffff;" text="book now">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="438.0" prefWidth="639.0">
+                     <children>
+                        <ScrollPane layoutX="8.0" layoutY="3.0" prefHeight="390.0" prefWidth="679.0" style="-fx-background-color: #ffffff;">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="403.0" prefWidth="655.0" style="-fx-background-color: #ffffff;">
+                                 <children>
+                                    <Button layoutX="267.0" layoutY="148.0" mnemonicParsing="false" onAction="#BookNow" style="-fx-background-color: #4169e1;" text="book now" />
+                                 </children>
+                                 <effect>
+                                    <Blend />
+                                 </effect>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
