@@ -1,6 +1,6 @@
 # IRCTC
 
-Everyday I try something new, So Today I will share code to book ticket online From IRCTC with the help of Selenium Webdriver.
+Everyday I try something new, So Today I will share code to book ticket online From IRCTC with the help of java application and machine learning to fetch the text from capcha.
 
 ### But before please! NOTE some points before Executing the code:
 
